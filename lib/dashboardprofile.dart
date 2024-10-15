@@ -40,7 +40,7 @@ class HalamanDashboard extends StatelessWidget {
                 children: [
                   Container(
                     width: double.infinity,
-                    height: 300,
+                    height: 315,
                     decoration: BoxDecoration(
                       color: Color(0xFF382857),
                       borderRadius: BorderRadius.only(
@@ -119,7 +119,6 @@ class HalamanDashboard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
                     ],
                   ),
                 ],
