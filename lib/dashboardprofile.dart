@@ -36,84 +36,93 @@ class HalamanDashboard extends StatelessWidget {
 
           return Column(
             children: [
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  color: Color.fromRGBO(56, 40, 87, 1),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                  ),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 30),
-                    Row(
-                      children: [
-                        IconButton(
-                          icon: Icon(Icons.arrow_back, color: Colors.white),
-                          onPressed: () {
-                            Get.offNamed('/');
-                          },
-                        ),
-                        Text(
-                          "Profil Saya",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
-                          textAlign: TextAlign.left,
-                        ),
-                      ],
+              Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: 300,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF382857),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/bg2.png'),
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                    SizedBox(height: 10),
-                    Center(
-                      child: Container(
-                        height: 150,
-                        width: 150,
-                        decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          borderRadius: BorderRadius.circular(75),
-                          border: Border.all(
-                            color: const Color.fromARGB(255, 255, 255, 255),
-                            width: 2,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 30),
+                      Row(
+                        children: [
+                          IconButton(
+                            icon: Icon(Icons.arrow_back, color: Colors.white),
+                            onPressed: () {
+                              Get.offNamed('/');
+                            },
                           ),
-                        ),
-                        child: ClipOval(
-                          child: Image.asset(
-                            'assets/images/samantha.jpg',
-                            height: 150,
-                            width: 150,
-                            fit: BoxFit.cover,
+                          Text(
+                            "Profil Saya",
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                            textAlign: TextAlign.left,
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 10),
+                      Center(
+                        child: Container(
+                          height: 150,
+                          width: 150,
+                          decoration: BoxDecoration(
+                            color: Colors.transparent,
+                            borderRadius: BorderRadius.circular(75),
+                            border: Border.all(
+                              color: Colors.white,
+                              width: 2,
+                            ),
+                          ),
+                          child: ClipOval(
+                            child: Image.asset(
+                              'assets/images/samantha.jpg',
+                              height: 150,
+                              width: 150,
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                    SizedBox(height: 10),
-                    Center(
-                      child: Text(
-                        '${user.username}',
-                        style: TextStyle(
+                      SizedBox(height: 10),
+                      Center(
+                        child: Text(
+                          '${user.username}',
+                          style: TextStyle(
                             fontSize: 20,
                             color: Colors.white,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    Center(
-                      child: Text(
-                        'Email: ${user.email}',
-                        style: TextStyle(
-                          fontSize: 14,
-                          color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
-                    ),
-                    SizedBox(height: 20),
-                  ],
-                ),
+                      Center(
+                        child: Text(
+                          'Email: ${user.email}',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                    ],
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsets.all(5.0),

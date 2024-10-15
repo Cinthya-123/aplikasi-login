@@ -46,7 +46,6 @@ class HalamanLogin extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 253, 250, 255),
       body: SafeArea(
-        // child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -54,11 +53,10 @@ class HalamanLogin extends StatelessWidget {
             Text(
               "Login",
               style: TextStyle(
-                fontSize: 28,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 20),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Column(
@@ -100,17 +98,14 @@ class HalamanLogin extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start, // Align children to the start
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     "Password",
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     textAlign: TextAlign.left,
                   ),
-                  SizedBox(
-                      height:
-                          8), // Add some space between the label and the TextField
+                  SizedBox(height: 8),
                   Container(
                     decoration: BoxDecoration(
                       color: const Color.fromARGB(255, 255, 255, 255),
@@ -131,7 +126,7 @@ class HalamanLogin extends StatelessWidget {
                           color: const Color.fromARGB(255, 37, 37, 37),
                         ),
                         onChanged: (value) {
-                          password.value = value; // Update password
+                          password.value = value;
                         },
                       ),
                     ),
@@ -143,7 +138,7 @@ class HalamanLogin extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25.0),
               child: Obx(() => GestureDetector(
-                    onTap: isLoading.value ? null : login, // Call login
+                    onTap: isLoading.value ? null : login,
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: 10.0),
                       decoration: BoxDecoration(
