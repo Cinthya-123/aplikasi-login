@@ -49,6 +49,11 @@ class HalamanLogin extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Image.asset(
+              'assets/images/login.png',
+              height: 200,
+              width: 200,
+            ),
             SizedBox(height: 25),
             Text(
               "Login",
